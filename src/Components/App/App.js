@@ -17,7 +17,8 @@ class App extends Component {
     }
   }
 
-  addShop = (newShop) => {
+  addStore = (newShop) => {
+    console.log("addStore")
     this.setState({shops: [...this.state.shops, newShop]});
   }
 
@@ -35,7 +36,6 @@ class App extends Component {
 
   render() {
     return (
-
         <main className='app'>
           <h1>Native Brands</h1>
           <NavBar handleClick={this.handleClick}

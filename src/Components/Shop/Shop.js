@@ -6,7 +6,12 @@ const Shop = ({ title, description, url}) => {
       <h3>{title}</h3>
       <p>{description}</p>
       <p>{url}</p>
-      <button>Go Shop!</button>
+      <button
+        type="button"
+        onClick={(e) => {
+          e.preventDefault();
+          window.location.href=`${url}`;
+        }}> Click here</button>
     </div>
   )
 }

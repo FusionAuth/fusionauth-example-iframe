@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import './Form.css';
 class Form extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       title: '',
       description: '',
@@ -16,7 +16,8 @@ class Form extends Component {
       id: Date.now(),
       ...this.state
     }
-    this.props.addShop(newShop);
+    console.log(newShop)
+    this.props.addStore(newShop);
     this.clearInputs();
   }
 
@@ -55,7 +56,7 @@ class Form extends Component {
         onChange={event => this.handleChange(event)}
       />
 
-      <button onClick={event => this.submitIdea(event)}>Add a Shop!</button>
+      <button onClick={event => this.submitShop(event)}>Add a Shop!</button>
       </form>
     )
   }
